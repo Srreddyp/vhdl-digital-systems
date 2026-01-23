@@ -1,0 +1,45 @@
+#Vivado (Xilinx)
+
+.Xil/
+*.jou
+*.log
+*.str
+*.xpr.user
+*.xml
+*.html
+*.txt
+*.csv
+
+#Generated project folders (common)
+
+*.cache/
+.runs/
+.sim/
+.hw/
+.ip_user_files/
+.gen/
+.srcs/sources_1/ip//.dcp
+.srcs/sources_1/ip//.veo
+.srcs/sources_1/ip//.vho
+.srcs/sources_1/ip//.xdc
+.srcs/sources_1/ip//.xml
+
+#Bitstreams / programming artifacts (prefer releases instead of git)
+
+*.bit
+*.bin
+*.mcs
+*.ltx
+*.dcp
+
+#Waveform / simulation outputs
+
+*.wdb
+*.wcfg
+
+#OS / editor
+
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
